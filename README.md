@@ -2,37 +2,55 @@
 Jawab :
 1.
 $host = "localhost";
+
 $db = "db_universitas";
+
 $uname = "root";
+
 $pass = "";
 
 $connect = mysqli_connect($host, $uname, $pass, $db);
 
 2.
 Ada beberapa cara Untuk membuat database pada phpMysql :
+
 a.Pertama membuat dengan menggunakan kode pada vcs , atom, dll. jadi membuatnya dengan kode
 kodenya :
+
 $sql = " CREATE DATABASE profile";
 
 b.Kedua membuatnya manual dengan cara membuka localhost admin dan membuatnya dengan menual
 
 3.
     $sql = "SELECT * FROM user";
+    
     $result = $koneksi->query($sql);
+    
       foreach($result as $result)
+      
         $id = $result["id"];
+        
         $nama = $result["nama"];
+        
         $role = $result["role"];
+        
         $availability = $result["availability"];
+        
         $age = $result["age"];
+        
         $location = $result["location"];
+        
         $experience = $result["years_expereience"];
+        
         $email = $result["email"];
+        
         echo "id : ".$id." nama : ".$nama." role : ".$role;
         
 4.
   $id_dosen = $_POST['id'];
+  
   $nama_dosen = $_POST['nama_dosen'];
+  
   $telp = $_POST['telp'];
 
   $query ="UPDATE dosen SET nama_dosen = '$nama_dosen', telp = '$telp' WHERE id = '$id_dosen'";
