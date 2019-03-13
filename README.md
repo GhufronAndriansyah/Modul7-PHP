@@ -1,28 +1,25 @@
 # Modul7-PHP
 Jawab :
 1.
-<?php
-
 $host = "localhost";
 $db = "db_universitas";
 $uname = "root";
 $pass = "";
 
 $connect = mysqli_connect($host, $uname, $pass, $db);
-?>
 
 2.
 Ada beberapa cara Untuk membuat database pada phpMysql :
 a.Pertama membuat dengan menggunakan kode pada vcs , atom, dll. jadi membuatnya dengan kode
 kodenya :
-    $sql = " CREATE DATABASE profile";
+$sql = " CREATE DATABASE profile";
+
 b.Kedua membuatnya manual dengan cara membuka localhost admin dan membuatnya dengan menual
 
 3.
     $sql = "SELECT * FROM user";
     $result = $koneksi->query($sql);
-
-    foreach($result as $result){
+      foreach($result as $result)
         $id = $result["id"];
         $nama = $result["nama"];
         $role = $result["role"];
@@ -31,7 +28,6 @@ b.Kedua membuatnya manual dengan cara membuka localhost admin dan membuatnya den
         $location = $result["location"];
         $experience = $result["years_expereience"];
         $email = $result["email"];
-
         echo "id : ".$id." nama : ".$nama." role : ".$role;
         
 4.
